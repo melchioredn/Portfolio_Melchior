@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - DevFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">My Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Accueil<br></a></li>
+          <li><a href="#about">A propos</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li class="dropdown"><a href="portfolio-details.html" class="active"><span>Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="portfolio-details.html">Réalisation 1</a></li>
+              <li><a href="app-2.html">Réalisation 2</a></li>
+              <li><a href="app-3.html">Réalisation 3</a></li>
+              <li><a href="app-4.html">Réalisation 4</a></li>
+              <li><a href="app-5.html">Réalisation 5</a></li>
+              <li><a href="app-6.html">Réalisation 6</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+        <div>
+          <img src="assets/img/portfolio/pfSense.jpg" alt="" class="project-image">
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Déploiement et Configuration de pfSense sous VirtualBox</h2>
+              <h4><em>1. Préparation de l’environnement</em></h4>
+              <p>
+                Avant de commencer, j’ai installé Oracle VM VirtualBox sur mon poste de travail. Cet hyperviseur me permet de 
+                Ensuite, j’ai téléchargé l’ISO de pfSense depuis le site officiel (<a href="https://www.pfsense.org">https://www.pfsense.org</a>). J’ai choisi la 
+                version AMD64 (architecture 64 bits) avec installateur en image ISO.
+              </p>
+
+              <h4><em>2. Création de la machine virtuelle</em></h4>
+              <p>
+                Dans VirtualBox, j’ai créé une nouvelle VM avec les paramètres suivants :
+                <ul>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Nom :</strong> pfSense</li>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Type :</strong> BSD</li>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Version :</strong> FreeBSD (64-bit)</li>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Mémoire RAM :</strong> 2048 Mo (2 Go)</li> 
+                  <li><strong>&nbsp;&nbsp;&nbsp;Disque dur :</strong> 20 Go en format VDI, stockage dynamique</li>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Processeurs :</strong> 2 vCPU pour de meilleures performances</li>
+                </ul>
+                Ensuite, j’ai attaché l’ISO de pfSense comme lecteur CD/DVD virtuel.
+              </p>
+
+              <h4><em>3. Configuration réseau dans VirtualBox</em></h4>
+              <p>
+                pfSense a besoin d’au moins deux cartes réseau :               
+                <ul>
+                  <li><strong>&nbsp;&nbsp;&nbsp;WAN (Internet)</strong> &rarr;  reliée à la carte réseau physique de mon PC (mode pont / bridged adapter)</li>
+                  <li><strong>&nbsp;&nbsp;&nbsp;LAN (Réseau local)</strong> &rarr;  reliée à un réseau interne VirtualBox (Internal Network)</li>
+                </ul>
+                Ainsi, j’ai configuré dans VirtualBox :
+                <ul>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Carte réseau 1</strong> &rarr;  Mode Bridged Adapter (WAN)</li>
+                  <li><strong>&nbsp;&nbsp;&nbsp;Carte réseau 2 </strong> &rarr;  Mode Internal Network (LAN)</li>
+                </ul>
+              </p>
+
+              <h4><em>4. Installation de pfSense</em></h4>
+              <p>
+                J’ai démarré la VM et l’installateur pfSense s’est lancé. Étapes effectuées :
+                <ol>
+                  <li>&nbsp;Sélection de Install pfSense</li>
+                  <li>&nbsp;Choix du clavier (French / FR)</li>
+                  <li>&nbsp;Partitionnement : <strong>Auto (UFS)</strong></li>
+                  <li>&nbsp;Lancement de l’installation &rarr; Copie des fichiers sur le disque</li>
+                  <li>&nbsp;Redémarrage de la VM</li>
+                </ol>
+              </p>
+
+              <h4><em>5. Configuration initiale (console pfSense)</em></h4>
+              <p>
+                Après le redémarrage, j’ai eu accès au menu console de pfSense. J’ai suivi ces étapes :
+                <ul>
+                  <li>Vérification que l’interface <strong>WAN</strong> correspond bien à la carte en mode pont</li>
+                  <li>Vérification que l’interface <strong>LAN</strong> correspond à la carte en réseau interne</li>
+                  <li>Attribution automatique par pfSense :</li>
+                  <ul>
+                    <li>WAN : IP reçue de ma box internet (via DHCP)</li>
+                    <li>LAN : IP statique 192.168.1.1/24</li>
+                  </ul>
+                </ul>
+              </p>
+
+              <h4><em>6. Accès à l’interface Web</em></h4>
+              <p>
+                Sur mon poste hôte, j’ai créé une seconde VM cliente (Windows/Linux) connectée au même réseau interne VirtualBox (Internal Network). <br>
+                Ensuite, depuis cette VM cliente, j’ai ouvert un navigateur et saisi : <br>
+                <strong>&#128073; https://192.168.1.1</strong> <br>
+                Un certificat auto-signé m’a été présenté, j’ai accepté l’exception. <br>
+                Login par défaut :
+                <ul>
+                  <li><strong>Username :</strong> admin</li>
+                  <li><strong>Mot de passe :</strong> pfsense</li>
+                </ul>
+              </p>
+
+              <h4><em>7. Configuration via l’assistant (Setup Wizard)</em></h4>
+              <p>
+                Une fois connecté, j’ai suivi l’assistant de configuration :
+                <ol>
+                  <li>Définition du nom d’hôte et du domaine</li>
+                  <li>Configuration du DNS (Google DNS : 8.8.8.8 / 1.1.1.1 de Cloudflare)</li>
+                  <li>Vérification des interfaces WAN et LAN</li>
+                  <li>Modification du mot de passe administrateur</li>
+                </ol>
+              </p>
+
+              <h4><em>8. Tests et Vérifications</em></h4>
+              <p>
+                <ul>
+                  <li>Depuis la VM cliente sur le LAN, j’ai testé la connexion Internet &rarr; succès</li>
+                  <li>J’ai configuré le <strong>DHCP Server</strong> sur pfSense pour le LAN afin d’attribuer automatiquement des adresses IP aux clients</li>
+                  <li>J’ai testé le <strong>pare-feu</strong> en ajoutant quelques règles simples (ex : bloquer ICMP/ping)</li>
+                </ul>
+              </p>
+
+              <h4><em>9. Conclusion</em></h4>
+              <p>
+                J’ai ainsi réussi à déployer pfSense dans un environnement virtualisé avec VirtualBox. <br> 
+                Ce lab me permet de pratiquer :
+                <ul>
+                  <li>Le <strong>pare-feu</strong> et le filtrage de paquets</li>
+                  <li>La gestion du <strong>NAT</strong></li>
+                  <li>La configuration du <strong>DHCP/DNS interne</strong></li>
+                  <li>Les futures fonctionnalités comme le VPN, le portail captif ou la haute disponibilité</li>
+                </ul>
+              </p>
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span><img src="assets/img/portfolio/pfSense_Infra.png" class="img-fluid" alt=""></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="assets/img/testimonials/Portfolio_Picture1.jpg" class="testimonial-img" alt="">
+                  <h3>E. R. Melchior EDOUN</h3>
+                  <h4>Analyste Cybersécurité</h4>
+                </div>
+              </div>
+
+              <p>
+                L’installation de pfSense m’a permis de mettre en place une solution de sécurité réseau fiable et flexible. 
+                Grâce à ses fonctions de pare-feu, de VPN et de gestion centralisée (DHCP, NAT, VLAN), j’ai pu sécuriser et 
+                organiser efficacement le trafic. En plus d’être une solution open-source économique, pfSense offre des 
+                modules complémentaires comme Snort ou pfBlockerNG pour renforcer la protection. Ce déploiement m’a également 
+                permis d’acquérir une expérience pratique dans l’administration et la sécurisation d’un réseau professionnel.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Projet Pare-feu</h3>
+              <ul>
+                <li><strong>Categorie</strong> Pare-feu</li>
+                <li><strong>Client</strong> Moi-Même</li>
+                <li><strong>Project date</strong> .... </li>
+                <!-- <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
+                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li> -->
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">My portfolio</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="social-links d-flex justify-content-center">
+                <a href="https://x.com/Rantiedoun" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.facebook.com/melchior.edn.2025/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/melchior_edn/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/melchior-edoun-025027295/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
