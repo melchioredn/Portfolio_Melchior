@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - DevFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">My Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Accueil<br></a></li>
+          <li><a href="index.html#about">A propos</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li class="dropdown"><a href="app-3.html" class="active"><span>Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="portfolio-details.html">Réalisation 1</a></li>
+              <li><a href="app-2.html">Réalisation 2</a></li>
+              <li><a href="app-3.html">Réalisation 3</a></li>
+              <li><a href="app-4.html">Réalisation 4</a></li>
+              <li><a href="app-5.html">Réalisation 5</a></li>
+              <li><a href="app-6.html">Réalisation 6</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main class="main">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div>
+          <img src="assets/img/portfolio/apache2.jpg" alt="" class="project-image">
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Déploiement et Configuration d’Apache2 sous Ubuntu</h2>
+
+              <h4><em>1. Préparation de l’environnement</em></h4>
+              <p>
+                Avant de commencer, j’ai utilisé un système Ubuntu 22.04 LTS à jour. 
+                J’ai ouvert le terminal et vérifié que les paquets essentiels étaient installés :
+                <ul>
+                  <li><strong>sudo apt update</strong> &rarr; mise à jour des dépôts</li>
+                  <li><strong>sudo apt upgrade</strong> &rarr; mise à jour des paquets</li>
+                </ul>
+                Ensuite, j’ai planifié la configuration du serveur web Apache2.
+              </p>
+
+              <h4><em>2. Installation d’Apache2</em></h4>
+              <p>
+                Pour installer Apache2, j’ai utilisé la commande :
+                <pre><code>sudo apt install apache2 -y</code></pre>
+                Après installation, j’ai vérifié que le service était actif :
+                <pre><code>sudo systemctl status apache2</code></pre>
+              </p>
+
+              <h4><em>3. Configuration des fichiers de base</em></h4>
+              <p>
+                J’ai configuré le serveur en éditant les fichiers principaux :
+                <ul>
+                  <li><strong>/etc/apache2/apache2.conf</strong> &rarr; configuration globale</li>
+                  <li><strong>/etc/apache2/ports.conf</strong> &rarr; définition du port (80 par défaut)</li>
+                  <li><strong>/var/www/html</strong> &rarr; emplacement des fichiers web</li>
+                </ul>
+                Pour tester, j’ai créé un fichier index.html dans /var/www/html :
+                <pre><code>echo "&lt;h1&gt;Bienvenue sur Apache2&lt;/h1&gt;" | sudo tee /var/www/html/index.html</code></pre>
+              </p>
+
+              <h4><em>4. Gestion des modules Apache2</em></h4>
+              <p>
+                Certains modules sont essentiels pour le fonctionnement des sites web :
+                <ul>
+                  <li>Activer le module rewrite : <pre><code>sudo a2enmod rewrite</code></pre></li>
+                  <li>Redémarrer Apache2 après activation : <pre><code>sudo systemctl restart apache2</code></pre></li>
+                </ul>
+              </p>
+
+              <h4><em>5. Configuration des Virtual Hosts</em></h4>
+              <p>
+                J’ai créé un Virtual Host pour un site exemple :
+                <pre><code>sudo nano /etc/apache2/sites-available/mon-site.conf</code></pre>
+                Contenu du fichier :
+                <pre><code>&lt;VirtualHost *:80&gt;
+      ServerAdmin admin@example.com
+      ServerName mon-site.local
+      DocumentRoot /var/www/mon-site
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+  &lt;/VirtualHost&gt;</code></pre>
+                Puis activation du site et rechargement d’Apache2 :
+                <pre><code>sudo a2ensite mon-site.conf
+  sudo systemctl reload apache2</code></pre>
+              </p>
+
+              <h4><em>6. Sécurisation et pare-feu</em></h4>
+              <p>
+                J’ai ouvert le port 80 et 443 dans UFW :
+                <pre><code>sudo ufw allow 'Apache Full'</code></pre>
+                Puis vérification de l’état du pare-feu :
+                <pre><code>sudo ufw status</code></pre>
+              </p>
+
+              <h4><em>7. Tests et vérifications</em></h4>
+              <p>
+                Depuis un navigateur sur la même machine ou sur un poste client, j’ai saisi :
+                <strong>&#128073; http://localhost</strong> ou <strong>http://mon-site.local</strong> après modification du fichier /etc/hosts.
+                <ul>
+                  <li>Page test affichée correctement &rarr; installation réussie</li>
+                  <li>Logs Apache consultés : <pre><code>sudo tail -f /var/log/apache2/access.log</code></pre></li>
+                </ul>
+              </p>
+
+              <h4><em>8. Conclusion</em></h4>
+              <p>
+                Le serveur Apache2 est désormais installé et configuré. 
+                Je peux héberger plusieurs sites avec Virtual Hosts, activer des modules supplémentaires et sécuriser le serveur via UFW. 
+                Ce déploiement m’a permis de comprendre l’architecture d’un serveur web Apache et d’acquérir une expérience pratique dans la gestion des services web sous Linux.
+              </p>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span><img src="assets/img/apache2_infra.png" class="img-fluid" alt=""></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="assets/img/testimonials/Portfolio_Picture1.jpg" class="testimonial-img" alt="">
+                  <h3>E. R. Melchior EDOUN</h3>
+                  <h4>Analyste Cybersécurité</h4>
+                </div>
+              </div>
+
+              <p>
+                Ce projet m’a permis de déployer un serveur web fonctionnel et sécurisé, prêt à héberger des applications et sites web. 
+                Apache2 étant open-source, il offre une grande flexibilité pour les modules et la personnalisation, et constitue une base solide pour des environnements web professionnels.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Projet Serveur Web</h3>
+              <ul>
+                <li><strong>Categorie</strong> Serveur Web</li>
+                <li><strong>Client</strong> Moi-Même</li>
+                <li><strong>Project date</strong> .... </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Portfolio Details Section -->
+  </main>
+
+
+  <footer id="footer" class="footer accent-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">My portfolio</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="social-links d-flex justify-content-center">
+                <a href="https://x.com/Rantiedoun" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.facebook.com/melchior.edn.2025/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/melchior_edn/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/melchior-edoun-025027295/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
